@@ -6,12 +6,11 @@
 /*   By: mzabalza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 22:44:15 by mzabalza          #+#    #+#             */
-/*   Updated: 2017/11/16 22:42:16 by mzabalza         ###   ########.fr       */
+/*   Updated: 2017/11/17 00:31:22 by mzabalza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static size_t		ft_nletts(char const *s, char c)
 {
