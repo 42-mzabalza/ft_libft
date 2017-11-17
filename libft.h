@@ -6,21 +6,21 @@
 /*   By: mzabalza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 17:32:45 by mzabalza          #+#    #+#             */
-/*   Updated: 2017/11/17 00:42:33 by mzabalza         ###   ########.fr       */
+/*   Updated: 2017/11/17 00:50:01 by mzabalza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
+# include <string.h>
+# include <stdlib.h>
+# include <unistd.h>
 
-typedef struct      s_list
+typedef struct		s_list
 {
-	void				*content;
+	void			*content;
 	size_t			content_size;
-	struct s_list		*next;
+	struct s_list	*next;
 }					t_list;
 
 size_t				ft_strlen(const char *str);
@@ -34,7 +34,7 @@ char				*ft_strncat(char *s1, const char *s2, size_t n);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *haystack, const char *needle);
-char				*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char				*ft_strnstr(const char *hay, const char *ne, size_t len);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 int					ft_isalnum(int c);
@@ -74,7 +74,7 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
-size_t				ft_strlcat(char *dst, const char* src, size_t size);
+size_t				ft_strlcat(char *dst, const char *src, size_t size);
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));

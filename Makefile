@@ -6,7 +6,7 @@
 #    By: mzabalza <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 01:31:42 by mzabalza          #+#    #+#              #
-#    Updated: 2017/11/13 17:44:01 by mzabalza         ###   ########.fr        #
+#    Updated: 2017/11/17 04:24:56 by mzabalza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,13 +21,14 @@ OBJ = *.o
 all: $(NAME)
 
 $(NAME):
-	gcc -c -I. $(FLAGS) $(SRC)
+	gcc -I. $(FLAGS) -c $(SRC)
 	ar rc $(NAME) $(OBJ)
 
 clean:
 	/bin/rm -f $(OBJ)
 
 fclean: clean
-	/bin/rm $(NAME)
+	/bin/rm -f $(NAME)
 
-re: fclean all
+re: fclean
+	make

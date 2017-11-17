@@ -14,14 +14,14 @@
 
 char	*ft_strnew(size_t size)
 {
-	int		i;
+	size_t	i;
 	char	*dst;
 
 	dst = malloc(sizeof(*dst) * (size + 1));
-	if (dst <= 0)
+	if (dst == 0)
 		return (NULL);
 	i = 0;
-	while (dst[i])
+	while (i <= size)
 	{
 		dst[i] = 0;
 		i++;

@@ -28,7 +28,7 @@ char	*ft_strtrim(char const *s)
 	{
 		nsp1++;
 		if (s[nsp1] == 0)
-			return ("");
+			return (ft_strnew(1));
 	}
 	nsp2 = ft_strlen(s) - 1;
 	while (s[nsp2] == ' ' || s[nsp2] == '\n' || s[nsp2] == '\t')

@@ -14,11 +14,13 @@
 
 void	ft_striter(char *s, void (*f)(char *))
 {
+	if (s == NULL || f == NULL)
+		return ;
 	if (s != 0)
 	{
 		while (*s)
 		{
-			f(&(*s));
+			f(s);
 			s++;
 		}
 	}
